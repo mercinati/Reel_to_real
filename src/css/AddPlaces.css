@@ -1,0 +1,51 @@
+/* AddPlaces Page Styles */
+.addplaces-container {
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #f8fafc;
+  padding: 32px 0;
+}
+.addplaces-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3a4a;
+  margin-bottom: 18px;
+}
+.addplaces-form label {
+  font-weight: 500;
+  color: #6366f1;
+  margin-bottom: 4px;
+  display: block;
+}
+.addplaces-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+.addplaces-form select {
+  margin-left: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #cbd5e1;
+}
+.addplaces-form button {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.addplaces-form button:hover {
+  background: #4338ca;
+}
+.addplaces-status {
+  margin-top: 24px;
+  color: #007bff;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .addplaces-container { padding: 18px 0; }
+  .addplaces-title { font-size: 1.1rem; }
+}

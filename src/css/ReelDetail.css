@@ -1,0 +1,43 @@
+/* ReelDetail Page Styles */
+.reeldetail-container {
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f8fafc;
+  padding: 32px 0;
+}
+.reeldetail-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3a4a;
+  margin-bottom: 18px;
+}
+.reeldetail-video {
+  background: #eee;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  font-size: 1.2rem;
+}
+.reeldetail-info {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.reeldetail-info strong {
+  color: #6366f1;
+}
+.reeldetail-status {
+  color: #007bff;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .reeldetail-container { padding: 18px 0; }
+  .reeldetail-title { font-size: 1.1rem; }
+  .reeldetail-video { height: 120px; font-size: 1rem; }
+}

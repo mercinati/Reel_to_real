@@ -1,0 +1,36 @@
+/* Itinerary Page Styles */
+.itinerary-container {
+  min-height: 100vh;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #f8fafc;
+  padding: 32px 0;
+}
+.itinerary-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3a4a;
+  margin-bottom: 18px;
+}
+.itinerary-dayplan {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.itinerary-dayplan h3 {
+  color: #6366f1;
+  margin-bottom: 8px;
+}
+.itinerary-dayplan strong {
+  color: #6366f1;
+}
+.itinerary-dayplan .itinerary-weather {
+  color: #007bff;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .itinerary-container { padding: 18px 0; }
+  .itinerary-title { font-size: 1.1rem; }
+  .itinerary-dayplan { padding: 10px; }
+}

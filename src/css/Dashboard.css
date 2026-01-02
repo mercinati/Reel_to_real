@@ -1,0 +1,40 @@
+/* Dashboard Page Styles */
+.dashboard-container {
+  min-height: 100vh;
+  padding-top: 32px;
+  background: linear-gradient(120deg, #f8fafc 60%, #e0e7ff 100%);
+}
+.dashboard-header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3a4a;
+  margin-bottom: 24px;
+}
+.dashboard-actions {
+  margin-bottom: 32px;
+}
+.dashboard-actions button {
+  margin-right: 16px;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.dashboard-actions button:hover {
+  background: #4338ca;
+}
+.dashboard-section {
+  margin-bottom: 32px;
+}
+.dashboard-section h3 {
+  color: #6366f1;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .dashboard-header { font-size: 1.3rem; }
+  .dashboard-actions button { padding: 8px 12px; font-size: 0.95rem; }
+}

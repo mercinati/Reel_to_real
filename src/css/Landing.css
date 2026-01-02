@@ -1,0 +1,114 @@
+/* Landing Page Styles */
+
+.landing-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 60%, #a5b4fc 100%);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+.landing-glass {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 48px 36px 36px 36px;
+  margin: 40px 0;
+  max-width: 480px;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.landing-logo {
+  width: 90px;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px #6366f155, 0 0 0 4px #fff;
+  border: 2px solid #a5b4fc;
+  background: #fff;
+}
+
+.landing-hero {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #232946;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px #a5b4fc33;
+}
+
+.landing-desc {
+  max-width: 480px;
+  text-align: center;
+  margin-bottom: 36px;
+  color: #4b5563;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.landing-section {
+  margin-bottom: 32px;
+  width: 100%;
+}
+.landing-section h3 {
+  color: #6366f1;
+  margin-bottom: 8px;
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+.landing-section ol, .landing-section ul {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-left: 20px;
+  color: #374151;
+  font-size: 1.05rem;
+}
+
+.landing-cta {
+  background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  box-shadow: 0 4px 24px #6366f133;
+  margin-top: 18px;
+  transition: background 0.2s, transform 0.15s;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  animation: popin 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.landing-cta:hover {
+  background: linear-gradient(90deg, #4338ca 60%, #6366f1 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px #6366f144;
+}
+
+@keyframes popin {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+
+@media (max-width: 600px) {
+  .landing-hero { font-size: 1.5rem; }
+  .landing-logo { width: 56px; }
+  .landing-section { margin-bottom: 20px; }
+  .landing-glass { padding: 18px 4vw; }
+  .landing-illustration img, .landing-illustration svg { width: 180px; max-width: 80vw; }
+}
