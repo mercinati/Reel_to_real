@@ -1,4 +1,10 @@
 /* Basic CSS Reset and Responsive Utilities */
+@import "tailwindcss";
+
+/* global.css */
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   margin: 0;

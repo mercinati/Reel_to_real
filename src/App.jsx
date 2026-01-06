@@ -20,10 +20,10 @@ function App() {
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/reels/add" element={<AddReel />} />
-        <Route path="/reels/:id" element={<ReelDetail />} />
         <Route path="/trips/create" element={<CreateTrip />} />
         <Route path="/trips/:id" element={<TripDetail />} />
+        <Route path="/reels/add" element={<AddReel />} />
+        <Route path="/reels/:id" element={<ReelDetail />} />
         <Route path="/trips/:id/add-places" element={<AddPlaces />} />
         <Route path="/itinerary/:tripId" element={<Itinerary />} />
       </Routes>
