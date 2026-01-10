@@ -1,40 +1,43 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 function TripCard({ trip }) {
   return (
-    <Link
-      to={`/trips/${trip.id}`}
-      className="block"
-    >
-      <div className="w-[260px] mx-auto overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl hover:scale-[1.02] transition cursor-pointer">
-
-        {/* Top Visual Section */}
-        <div className="h-36 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
-          <span className="text-white text-lg font-semibold truncate text-center px-2">
+    <Link to={`/trips/${trip.id}`} className="block">
+      <div
+        className="
+          w-[230px]
+          rounded-xl
+          overflow-hidden
+          bg-white
+          border border-slate-300
+          shadow-md
+          hover:shadow-lg
+          hover:-translate-y-0.5
+          transition-all
+          duration-200
+        "
+      >
+        {/* Header */}
+        <div className="h-32 bg-emerald-600 flex items-center justify-center">
+          <h2 className="text-emerald-50 text-lg font-semibold tracking-wide truncate px-3">
             {trip.city}
-          </span>
+          </h2>
         </div>
 
-        {/* Content Section */}
-        <div className="p-4 space-y-2">
-          <h3 className="text-lg font-semibold text-teal-600 break-words">
-            {trip.city}
-          </h3>
-
+        {/* Body */}
+        <div className="p-4 space-y-1">
           <p className="text-sm text-slate-600">
-            Duration: {trip.totalDays} days
+            Duration: <span className="font-medium">{trip.totalDays} days</span>
           </p>
 
-          <p className="text-sm text-slate-700 capitalize break-words">
-            {trip.style}
+          <p className="text-sm text-slate-700 capitalize">
+            Style: {trip.style}
           </p>
 
           <p className="text-sm text-slate-600 line-clamp-2">
             Places: {trip.places ? trip.places.join(', ') : 'N/A'}
           </p>
         </div>
-
       </div>
     </Link>
   );
