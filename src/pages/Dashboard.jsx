@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { mockTrips } from '../utils/mockData';
 import TripCard from '../components/trips/TripCard';
@@ -16,6 +16,7 @@ import {
 
 function Dashboard() {
   const navigate = useNavigate();
+  const [trips, setTrips] = useState([]);
 
   useEffect(() => {
     fetchTrips();
@@ -24,12 +25,15 @@ function Dashboard() {
 
   const fetchTrips = async () => {
     try {
-      const response = await axios.post(`${server}/api/trips/user/a85f15ab-f32f-4f6e-b6c1-e2f166da09c1`, {
+      const response = await axios.get(`${server}/api/trips/user/a85f15ab-f32f-4f6e-b6c1-e2f166da09c1`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
       });
+      const data = response.data;
+      setTrips(data);
+      // console.log('Fetched trips:', data);
       if (!response.ok) {
         throw new Error('Failed to fetch trips');
       }
@@ -119,11 +123,11 @@ function Dashboard() {
             </div>
           </div>
 
-          {mockTrips.length === 0 ? (
+          {trips.length === 0 ? (
             <EmptyState message="No trips created yet." />
           ) : (
             <div className="mt-6 flex flex-wrap gap-6">
-              {mockTrips.map((trip) => (
+              {trips.map((trip) => (
                 <TripCard key={trip.id} trip={trip} />
               ))}
             </div>

@@ -20,7 +20,7 @@ function TripCard({ trip }) {
         {/* Header */}
         <div className="h-32 bg-emerald-600 flex items-center justify-center">
           <h2 className="text-emerald-50 text-lg font-semibold tracking-wide truncate px-3">
-            {trip.city}
+            {trip.destinationCity}
           </h2>
         </div>
 
@@ -31,7 +31,7 @@ function TripCard({ trip }) {
           </p>
 
           <p className="text-sm text-slate-700 capitalize">
-            Style: {trip.style}
+            Style: {trip.travelStyle}
           </p>
 
           <p className="text-sm text-slate-600 line-clamp-2">
